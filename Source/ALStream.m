@@ -340,7 +340,7 @@ void u16Append(NSMutableData *data, UInt16 n)
 		
 		[self updateEq];		
 	}
-		
+
 	// Create the HTTP request
 	CFHTTPMessageRef request = CFHTTPMessageCreateRequest(kCFAllocatorDefault, 
 																												CFSTR("GET"),
@@ -352,6 +352,14 @@ void u16Append(NSMutableData *data, UInt16 n)
 	// Init network stream
 	stream = CFReadStreamCreateForHTTPRequest(kCFAllocatorDefault, request);
 	CFRelease(request);
+	
+	// Proxy support
+	CFDictionaryRef proxyDict = SCDynamicStoreCopyProxies(NULL);
+	XLog(@"Proxies: %@", (NSDictionary *)proxyDict);
+	if(proxyDict) {
+		CFReadStreamSetProperty(stream, kCFStreamPropertyHTTPProxy, proxyDict);
+		CFRelease(proxyDict);
+	}
 	
 	// Should redirect...
 	if(!CFReadStreamSetProperty(stream, 

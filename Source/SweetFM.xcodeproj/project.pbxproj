@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07FC1B7D102055B400D79A28 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC1B7C102055B400D79A28 /* StatusItemView.m */; };
 		1DDD58160DA1D0A300B32029 /* App.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* App.xib */; };
+		3772BC2E1031942B0081733A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3772BC2D1031942B0081733A /* SystemConfiguration.framework */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		DC052DCC0FD5974900AE9BAC /* SkinSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC052DCB0FD5974900AE9BAC /* SkinSelectView.m */; };
@@ -163,6 +164,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* SweetFM_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweetFM_Prefix.pch; sourceTree = "<group>"; };
+		3772BC2D1031942B0081733A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SweetFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC052DCA0FD5974900AE9BAC /* SkinSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkinSelectView.h; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				DC059F960FD9566200C66271 /* ID3.framework in Frameworks */,
 				DC05A1470FD99E9900C66271 /* Skype.framework in Frameworks */,
 				DC3D5F980FDED637001B96F1 /* Sparkle.framework in Frameworks */,
+				3772BC2E1031942B0081733A /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +390,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3772BC2D1031942B0081733A /* SystemConfiguration.framework */,
 				DCC90BEB0FD6A338001F60FD /* QuartzCore.framework */,
 				DC765D3C0FD5CE62001687EA /* Carbon.framework */,
 				DC328F2F0FD3069600644278 /* CoreFoundation.framework */,
