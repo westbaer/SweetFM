@@ -31,8 +31,6 @@
 
 	BOOL skypeConnected;
 	NSMutableArray *statusBuffer;
-	double originalVolume;
-	
 }
 
 @property (readonly) BOOL skypeConnected;
