@@ -70,7 +70,6 @@ extern NSString * const RatingFlagSkip;
 
 - (BOOL)scrobble:(DeviceTrack *)track withRatingFlag:(NSString *)rate;
 - (BOOL)nowPlaying:(DeviceTrack *)track;
-- (void)changeAdiumStatusMessage:(DeviceTrack *)track;
 
 - (BOOL)love:(DeviceTrack *)track;
 - (BOOL)ban:(DeviceTrack *)track;

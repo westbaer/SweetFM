@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		07FC1B7D102055B400D79A28 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC1B7C102055B400D79A28 /* StatusItemView.m */; };
 		1DDD58160DA1D0A300B32029 /* App.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* App.xib */; };
+		37681F03103D73DD00AE24BE /* HAdium.m in Sources */ = {isa = PBXBuildFile; fileRef = 37681F02103D73DD00AE24BE /* HAdium.m */; };
+		37681F33103D7D3100AE24BE /* HiChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 37681F32103D7D3100AE24BE /* HiChat.m */; };
 		3772BC2E1031942B0081733A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3772BC2D1031942B0081733A /* SystemConfiguration.framework */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -164,6 +166,10 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* SweetFM_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweetFM_Prefix.pch; sourceTree = "<group>"; };
+		37681F01103D73DD00AE24BE /* HAdium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAdium.h; sourceTree = "<group>"; };
+		37681F02103D73DD00AE24BE /* HAdium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAdium.m; sourceTree = "<group>"; };
+		37681F31103D7D3100AE24BE /* HiChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiChat.h; sourceTree = "<group>"; };
+		37681F32103D7D3100AE24BE /* HiChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiChat.m; sourceTree = "<group>"; };
 		3772BC2D1031942B0081733A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SweetFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -731,6 +737,10 @@
 				DC328F250FD305F300644278 /* HKeychain.m */,
 				DC05A14A0FD99EB100C66271 /* HSkype.h */,
 				DC05A14B0FD99EB100C66271 /* HSkype.m */,
+				37681F01103D73DD00AE24BE /* HAdium.h */,
+				37681F02103D73DD00AE24BE /* HAdium.m */,
+				37681F31103D7D3100AE24BE /* HiChat.h */,
+				37681F32103D7D3100AE24BE /* HiChat.m */,
 			);
 			name = Handler;
 			sourceTree = "<group>";
@@ -978,6 +988,8 @@
 				DC3D60080FDEDAB4001B96F1 /* SysInfo.m in Sources */,
 				DCE0546910106860000AD69F /* HLyrics.m in Sources */,
 				07FC1B7D102055B400D79A28 /* StatusItemView.m in Sources */,
+				37681F03103D73DD00AE24BE /* HAdium.m in Sources */,
+				37681F33103D7D3100AE24BE /* HiChat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

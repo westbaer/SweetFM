@@ -40,6 +40,8 @@
 #import "HSettings.h"
 #import "HMediaKeys.h"
 #import "HSkype.h"
+#import "HAdium.h"
+#import "HiChat.h"
 
 #import "QHandler.h"
 #import "iTunesLinkBuilder.h"
@@ -213,7 +215,7 @@
 			 !activeDevice.track.scrobbled &&
 			 [HSettings scrobbleEnabled])
 		{
-			XLog(@"Srobbling...");
+			XLog(@"Scrobbling...");
 			FMScrobbleSession *session = [activeDevice scrobbleSession];
 			[[session queue] scrobble:activeDevice.track 
 								 withRatingFlag:(activeDevice.track.loved ? RatingFlagLove : nil)];
@@ -340,10 +342,14 @@
 	{
 		NSString *msg = [NSString stringWithFormat:@"%@ - %@", track.name, track.artist];
 		[[HSkype instance] setSkypeStatus:msg];
+		[[HAdium instance] setAdiumStatus:msg];
+		[[HiChat instance] setiChatStatus:msg];
 	}
 	else if(track.name)
 	{
 		[[HSkype instance] setSkypeStatus:track.name];
+		[[HAdium instance] setAdiumStatus:track.name];
+		[[HiChat instance] setiChatStatus:track.name];
 	}
 	
 	[[HGrowl instance] postNotificationWithName:GrowlTrackPlaying
@@ -369,6 +375,11 @@
 																				title:@"Stopped"
 																	description:nil
 																				image:nil];
+	// Clear Adium & Skype Status
+	[[HSkype instance] setSkypeStatus:nil];
+	[[HAdium instance] setAdiumStatus:nil];
+	[[HiChat instance] setiChatStatus:nil];
+
 	if([dev isEqualTo:radioDevice])
 	{
 		if(tuneToOtherStation)

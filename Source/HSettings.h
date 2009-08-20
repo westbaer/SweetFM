@@ -128,6 +128,11 @@ typedef enum {
 + (BOOL)adiumStatusChangeEnabled;
 
 //
+// iChat
+//
++ (BOOL)iChatStatusChangeEnabled;
+
+//
 // Skins
 //
 + (SkinBundle *)selectedSkin;

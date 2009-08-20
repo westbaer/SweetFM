@@ -60,6 +60,7 @@ NSString * const EQPreset = @"kEQPreset";
 NSString * const EQGain = @"kEQGain";
 NSString * const RadioVolume = @"kRadioVolume";
 NSString * const AdiumUpdateStatus = @"kUpdateAdium";
+NSString * const iChatUpdateStatus = @"kUpdateiChat";
 NSString * const DownloadLyrics = @"kDownloadLyrics";
 NSString * const CashtisticsCounter = @"kCashtisticsCounter";
 
@@ -357,6 +358,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HSettings, instance);
 + (BOOL)adiumStatusChangeEnabled
 {
 	return [[NSUserDefaults standardUserDefaults] boolForKey:AdiumUpdateStatus];
+}
+
++ (BOOL)iChatStatusChangeEnabled
+{
+	return [[NSUserDefaults standardUserDefaults] boolForKey:iChatUpdateStatus];
 }
 
 + (BOOL)lyricDownloadEnabled
