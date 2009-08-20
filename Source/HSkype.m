@@ -28,6 +28,8 @@
 #import "SynthesizeSingleton.h"
 #import "SkypeAPI.h"
 #import "HSettings.h"
+#import "XLog.h"
+#import "HMediaKeys.h"
 
 
 @implementation HSkype
@@ -92,6 +94,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HSkype, instance);
 {
 	[self setSkypeStatus:nil];
 }
+
+- (void)skypeNotificationReceived:(NSString*)aNotificationString 
+{
+	if([aNotificationString hasPrefix:@"CALL"] && [aNotificationString hasSuffix:@"STATUS INPROGRESS"]) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:MediaKeyPlayPauseUpNotification object:nil];
+	} else if([aNotificationString hasPrefix:@"CALL"] && [aNotificationString hasSuffix:@"STATUS FINISHED"]) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:MediaKeyPlayPauseUpNotification object:nil];
+	}
+}
+
 
 - (void)setSkypeStatus:(NSString *)theStatus
 {
