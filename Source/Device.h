@@ -103,6 +103,7 @@ typedef enum {
 	NSString *album;
 	NSImage *cover;
 	double length;
+	NSUInteger hash;
 	NSUInteger rating;
 	
 	BOOL scrobbled;
