@@ -95,16 +95,20 @@ NSString * const MediaTypeiTunesU = @"iTunesU";
 																					encoding:NSUTF8StringEncoding] autorelease];
 	NSDictionary *result = [parser objectWithString:json error:&err];
 		
-	if(err)
+	if(err) {
+		[parser release];
 		return nil;
-		
+	}
+	
 	//
 	// We just take the first link and ...
 	//
 	NSArray *results = [result objectForKey:@"results"];
 	
-	if(![results count])
+	if(![results count]) {
+		[parser release];
 		return nil;
+	}
 		
 	NSDictionary *first = [results objectAtIndex:0];
 	
@@ -114,6 +118,8 @@ NSString * const MediaTypeiTunesU = @"iTunesU";
 	*/
 	
 	NSMutableString *link = [first objectForKey:@"itemParentLinkUrl"];
+	
+	[parser release];
 	
 	return [NSURL URLWithString:link];
 }
