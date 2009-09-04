@@ -85,7 +85,7 @@
 		//
 		// Init position timer
 		//
-		[[NSTimer scheduledTimerWithTimeInterval:1
+		trackTimer = [[NSTimer scheduledTimerWithTimeInterval:1
 																			target:self 
 																		selector:@selector(updatePosition) 
 																		userInfo:nil 
@@ -97,6 +97,11 @@
 
 - (void)dealloc
 {
+	if(trackTimer) {
+		[trackTimer invalidate];
+		[trackTimer release];
+	}
+	
 	[tunes release];
 	[currentTrack release];
 	[super dealloc];
@@ -238,6 +243,7 @@
 		
 		if(newState==DeviceStopped)
 		{
+			tunesState = newState;
 			if([delegate respondsToSelector:@selector(devicePlaybackStopped:)])
 				[delegate devicePlaybackStopped:self];
 		}

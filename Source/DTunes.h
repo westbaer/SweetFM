@@ -41,6 +41,7 @@
 	NSUInteger tunesHash;
 	
 	DeviceTrack *currentTrack;
+	NSTimer *trackTimer;
 }
 
 @end
